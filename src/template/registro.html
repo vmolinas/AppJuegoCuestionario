@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %} Registro{% endblock title %}
+{% block content %}
+
+
+   <div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4">
+            <div class="card">
+                <div class="animated bounceInLeft">
+                
+                <form class="box" method="POST" style="color: rgb(0, 0, 0);">
+                   
+                    <h2 class="display-1"  style="font-family: 'Pacifico', cursive; color:rgb(1, 2, 2)">Crear Cuenta</h2>
+                    <table class="table">
+                        {% csrf_token %}
+                        {% for f in form %}
+                          <tr>
+
+                              <th>{{f.label}}</th>
+                              <td>{{f}}</td>
+                          </tr>
+
+                          
+                        {% endfor %}
+                        
+                    </table>
+                     <input type="submit" name="ingresar" value="Registrarme" class="btn btn-outline-success"/> 
+                     <br>
+
+                     <a href="{% url 'login' %}" class="btn mt-4 btn-sm btn-outline-secondary" >Inicia Sesión</a>
+                     <p style=" color:rgb(149, 153, 156)">Si ya tienes una cuenta</p>
+                     
+                     
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

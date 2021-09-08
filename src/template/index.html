@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Inicio
+{% endblock title %}
+
+{% block content %}
+
+    
+        
+                <div class="card p-4 m-4">
+                    <div class="card-body p-2" style="background-color: black;">
+                    <section
+                        id="section-jumbotron"
+                        style="background-color: rgb(243, 243, 243)"
+                        class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center">
+                        <div class="container text-center p-3">
+                            <img src="{% static 'img/bienvenido.png' %}" width="35%" class="wow animated bounceInLeft" alt="Transparent MDB Logo" id="animated-img1">
+                            
+
+                            <h1 class="display-1">&#128584	&#128585 &#128586</h1>
+                            <p class="lead" >Este es un Juego de opción múltiple creado por el Grupo 12.</p>
+                            
+                            <p class="lead" style="color: rgb(125, 129, 129)">Para comenzar</p>
+                            <a href="{% url 'login' %}" class="btn btn-lg btn-outline-dark">Inicia Sesión o Registrate</a>
+                        </div>
+                    </section>
+                    </div>      
+                </div>
+
+{% endblock content %}
