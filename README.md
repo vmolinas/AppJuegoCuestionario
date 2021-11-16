@@ -26,5 +26,5 @@ pip install -r requeriments.txt
 ## Construido con 🛠️
 
 * [Django]Framework web
-
+* [SQLite] Base de Datos
 ---
